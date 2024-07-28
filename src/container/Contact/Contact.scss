@@ -1,0 +1,117 @@
+.app__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 700px;
+
+  .head-text {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .app__contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+
+    .app__contact-icons,
+    .app__contact-details {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    .app__contact-icons {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+        padding: 0.75rem;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          color: #0073b1;
+          background: #f0f0f0;
+        }
+
+        &:nth-child(2):hover {
+          color: #0a66c2; /* LinkedIn color */
+        }
+
+        &:nth-child(3):hover {
+          color: #333; /* GitHub color */
+        }
+
+        &:nth-child(4):hover {
+          color: #d14836; /* Email color */
+        }
+
+        svg {
+          font-size: 1.5rem;
+
+          @media screen and (max-width: 480px) {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    .app__contact-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1rem;
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        padding: 0.6rem;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: fit-content;
+
+        @media screen and (max-width: 480px) {
+          font-size: 0.875rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .app__contact-container {
+      flex-direction: column;
+      align-items: center;
+
+      .app__contact-icons,
+      .app__contact-details {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .app__contact-details {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}
