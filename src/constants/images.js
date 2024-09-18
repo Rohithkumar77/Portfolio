@@ -18,6 +18,9 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 import java from '../assets/java.png';
+import MERN from '../assets/MERN.jpeg';
+import logoMERN from '../assets/logoMERN.png';
+import mdb from '../assets/mongodb.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -39,8 +42,22 @@ import streamlit from '../assets/streamlit.png';
 import spring from '../assets/spring.png';
 import sql from '../assets/sql.png';
 import bootstrap from '../assets/bootstrap.png';
+import reactr from '../assets/react.png';
+import ml from '../assets/ml.jpg';
+import google from '../assets/google.jpg';
+import ex from '../assets/expressimg.png';
+import nx from '../assets/nx.png';
+
 
 export default {
+  nx,
+  ex,
+  reactr,
+  ml,
+  google,
+  mdb,
+  logoMERN,
+  MERN,
   spring,
   sql,
   bootstrap,

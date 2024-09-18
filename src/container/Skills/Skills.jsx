@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { images } from '../../constants';
+import reactr from '../../assets/react.jpg'
+import ml from '../../assets/ml.jpg';
+import google from '../../assets/google.jpg';
 
 import { AppWrap, MotionWrap } from '../../wrappper';
 import './Skills.scss';
@@ -43,15 +46,23 @@ const skillsData = [
     icon: images.streamlit,
   },
   {
-    name: 'Spring',
+    name: 'MongoDB',
     //bgColor: '#F7DF1E',
-    icon: images.spring,
+    icon: images.mdb,
   },
   {
     name: 'SQL',
     //bgColor: '#F7DF1E',
     icon: images.sql,
   },
+  {
+    name: 'ExpressJs',
+    icon: images.ex,
+  },
+  {
+    name: 'NodeJs',
+    icon: images.nx,
+  }
   // Add more skills as needed
 ];
 
@@ -75,13 +86,33 @@ const experiencesData = [
         desc: 'Worked on both frontend and backend development tasks.',
       },
     ],
+
   },
   // Add more experiences as needed
+];
+
+const certificationsData = [
+  {
+    title: 'Certification 1',
+    reactr,
+    icon: images.reactr, // Image for certification 1
+  },
+  {
+    title: 'Certification 2',
+    ml,
+    icon: images.ml, // Image for certification 2
+  },
+  {
+    title: 'Certification 3',
+    google,
+    icon: images.google, // Image for certification 3
+  },
 ];
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [certifications, setCertifications] = useState([]);
 
   useEffect(() => {
     // Set the hardcoded data instead of fetching from a backend
@@ -147,11 +178,33 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
+          <h2 className="head-text">Certifications</h2>
+      <div className="app__certifications-list">
+        <div className="app__certifications-item">
+          <div className="app__flex">
+            <img className='ims' src={reactr} alt={'React certificate'} />
+          </div>
+        </div>
+        <div className="app__certifications-item">
+          <div className="app__flex">
+            <img className='ims' src={google} alt={'Python certificate'}  />
+          </div>
+        </div>
+        <div className="app__certifications-item">
+          <div className="app__flex">
+            <img className='ims' src={ml} alt={'Machine Learning certificate'}  />
+          </div>
         </div>
       </div>
+        </div>
+      </div>
+      {/* Certifications Section */}
+  
+
     </>
   );
 };
+
 
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),

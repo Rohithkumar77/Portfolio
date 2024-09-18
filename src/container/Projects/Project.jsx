@@ -10,12 +10,12 @@ import './Project.scss';
 // Hardcoded work data
 const worksData = [
   {
-    title: 'User Management System',
-    description: 'A system for managing user accounts and profiles.',
-    imgUrl: images.about04,
-    //projectLink: '',
-    codeLink: 'https://github.com/Rohithkumar77/user-managemnet-system',
-    tags: ['Java', 'React JS'],
+    title: 'Ecommerce website',
+    description: 'A MERN stack product store application featuring full CRUD operations for managing products',
+    imgUrl: images.MERN,
+    projectLink: '',
+    codeLink: 'https://github.com/Rohithkumar77/e-com-website',
+    tags: ['MERN', 'React JS'],
   },
   {
     title: 'Diet Recommendations System',
@@ -30,7 +30,7 @@ const worksData = [
     description: 'A simple project for creating and sharing prompts.',
     imgUrl: images.about01,
     //projectLink: 'https://project1.com',
-    codeLink: 'https://github.com/project1',
+    codeLink: 'https://github.com/Rohithkumar77/next-js',
     tags: ['React JS'],
   },
   {
@@ -84,7 +84,7 @@ const Project = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Java', 'Python', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX','MERN', 'Python', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -112,17 +112,19 @@ const Project = () => {
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+              {/* 
+<a href={work.projectLink} target="_blank" rel="noreferrer">
+  <motion.div
+    whileInView={{ scale: [0, 1] }}
+    whileHover={{ scale: [1, 0.90] }}
+    transition={{ duration: 0.25 }}
+    className="app__flex"
+  >
+    <AiFillEye />
+  </motion.div>
+</a>
+*/}
 
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.90] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillEye />
-                  </motion.div>
-                </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}

@@ -156,3 +156,13 @@
     }
   }
   
+  .app__certifications-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    margin-top: 2rem;
+  }
+  .ims {
+    width: 200px;
+    height: 200px;
+  }
+  

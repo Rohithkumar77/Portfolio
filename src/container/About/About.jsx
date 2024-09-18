@@ -7,7 +7,7 @@ import './About.scss'
 
 const About = () => {
     const about = [
-        { title: 'Expert Web Development', description: 'Creating responsive and dynamic websites with modern technologies.', imgUrl: images.about01 },
+        { title: 'Beginner MERN stack developer', description: 'Creating responsive and dynamic websites with modern technologies.', imgUrl: images.logoMERN },
         { title: 'Front end Development', description: 'Building interactive and user-friendly interfaces with cutting-edge front-end technologiess', imgUrl: images.about02 },
         { title: 'Java Development', description: 'Developing robust and scalable applications using Java.', imgUrl: images.about03 },
         { title: 'Python Full Stack', description: 'Delivering complete and efficient solutions with expertise in both front-end and back-end Python development', imgUrl: images.about04 }
